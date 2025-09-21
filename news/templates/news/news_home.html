@@ -10,7 +10,11 @@
                 <div class="alert alert-warning">
                     <h3>{{ el.title }}</h3>
                     <p>{{ el.anons }}</p>
-                    <a href="{% url 'news-detail' el.id %}" class="btn btn-warning">Читати більше</a>
+                    <small>Опубліковано: {{ el.date }}</small><br>
+                    <a href="{% url 'news-detail' el.id %}" class="btn btn-warning">Читати більше</a> <br> <br>
+                    <a href="{% url 'news-redact' el.id %}" class="btn btn-secondary">Редагувати</a>
+                    <a href="{% url 'news-delete' el.id %}" class="btn btn-warning">Видалити!</a>
+
                 </div>
             {% endfor %}
         {% else %}

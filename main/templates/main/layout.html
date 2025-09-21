@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 </head>
 <body>
+
+
     <aside>
         <img src="{% static 'main/img/logo_simple.svg' %}" alt="logo">
         <span class="logo">Orest </span>
@@ -24,10 +26,42 @@
             <a href="{% url 'news_home' %}"><li><i class="fas fa-newspaper"></i>Новини</li></a>
             <a href="{% url 'create' %}"><li><button class="btn btn-info"><i class="fas fa-paper-plane"></i> Добавити тред </button></li></a>
 
+        <!-- Якір на початок -->
+<a id="top"></a>
+
+<!-- Контент для прикладу -->
+<div style="height:1500px; padding:20px;">
+
+</div>
+
+<!-- Кнопка вгору -->
+<a href="#top" class="scroll-top">↑</a>
+
+<style>
+.scroll-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #ffc107; /* жовтий */
+  color: black;
+  padding: 12px 16px;
+  font-size: 20px;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  transition: 0.3s;
+}
+
+.scroll-top:hover {
+  background: #ff9800;
+}
+</style>
+
         </ul>
     </aside>
     <main>
         {% block content %}
+
         {% endblock %}
     </main>
 

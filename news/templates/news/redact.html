@@ -1,10 +1,10 @@
 {% extends 'main/layout.html' %}
 
-{% block title %}Форма по добавленію статті{% endblock %}
+{% block title %}Форма по редактуванню статті{% endblock %}
 
 {% block content %}
     <div class="features">
-        <h1>Форма з добавлення статті</h1>
+        <h1>Форма по редактуванню статті</h1>
         <form method="post">
             {% csrf_token %}<br>
             {{ form.title }}<br>
@@ -12,7 +12,7 @@
             {{ form.full_text }}<br>
 
             <span>{{ error  }}</span>
-            <button class="btn btn-success" type="submit"> добавити статью</button>
+            <button class="btn btn-success" type="submit"> редагувати статтю </button>
 
 
         </form>
